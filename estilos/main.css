@@ -71,6 +71,7 @@ body {
   flex: 1;
   padding: 10px;
   margin-left: 5px;
+  border-left: solid black 2px;
 }
 .pieDePagina .enlacesInteres ul {
   list-style: none;
@@ -87,12 +88,18 @@ body {
   font-size: 18px;
 }
 .pieDePagina .informacionTienda {
+  border-left: solid black 2px;
   margin-right: 5px;
   flex: 1;
   padding: 10px;
 }
 .pieDePagina .informacionTienda p {
   margin: 5px 0;
+}
+.pieDePagina .logos .cc {
+  src: url("https://creativecommons.org/");
+  width: 150px;
+  height: auto;
 }
 
 .menuLateral {

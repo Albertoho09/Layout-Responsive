@@ -13,7 +13,7 @@
         flex: 1; // hacemos que el elemento ocupe todo el espacio disponible horizontalmente
         padding: 10px;
         margin-left: 5px;
-
+        border-left: solid black 2px;
         ul {
             list-style: none; // Elimina los marcadores 
             padding: 0;
@@ -35,12 +35,22 @@
 
     .informacionTienda {
 
+        border-left: solid black 2px;
         margin-right: 5px;
         flex: 1; // hacemos que el elemento ocupe todo el espacio disponible horizontalmente
         padding: 10px;
 
         p {
             margin: 5px 0; // margen arriba y debajo de los parrafos
+        }
+    }
+
+    .logos{
+
+        .cc{
+            src: url("https://creativecommons.org/");
+            width: 150px;
+            height: auto;
         }
     }
 }
