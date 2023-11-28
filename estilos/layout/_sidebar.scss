@@ -1,0 +1,87 @@
+@import "../base/variables";
+
+.menuLateral {
+    border-right: 2px solid grey;
+    max-width: $anchoMenuLateral; // ancho maximo
+    flex: 1; // ocupa todo el ancho posible pero ligado a un maximo
+    flex-direction: column; // se apilan los elementos en una columna
+    height: auto; // altura segun el contenido
+    background-color: $colorMalva;
+
+    .filtro {
+        width: 70%;
+        padding: 20px;
+
+        margin: {
+            left: auto;
+            right: auto;
+            top: 80px;
+        }
+
+        font-weight: bolder; // fuente en negrita
+        font-family: $fuente; // fuente
+        background: linear-gradient(to top, grey 0%, white 70%, white 70%);
+        border: 2px solid black;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: left;
+
+        .filtro p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="range"],
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    }
+
+
+    .columna {
+        list-style: none; // Elimina los marcadores de lista.
+        padding: 0;
+    }
+
+    .fila {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border-bottom: 1px solid grey;
+        width: 80%;
+        height: 50px;
+        text-align: center; // alinear texto al centro
+
+        transition: transform 0.5s; // duracion de la transiccion de este caso :hover
+
+        &:hover {
+            transform: scale(1.1);
+            border-bottom: 2px solid black;
+        }
+    }
+
+    a {
+
+        // grupo de estilos esteticos para los enlaces del menu lateral
+        text-decoration: none;
+        color: black;
+        font-family: $fuente;
+        font-weight: bolder;
+        font-size: large;
+    }
+}

@@ -1,0 +1,14 @@
+@import "../base/variables";
+
+.paginaCatalogo {
+    h2 {
+        padding: 20px;
+        width: 90%;
+        border-bottom: 2px solid grey;
+    }
+
+    width: $anchoContenido; //le damos un ancho a la pagina de catalogo
+    display: flex; //flexbox
+    flex-wrap: wrap; //si los elementos ocupan mas del ancho de la pantalla estas se desbordan y pasan a una segunda fila
+    justify-content: center; //justificamos los elementos al centro
+}

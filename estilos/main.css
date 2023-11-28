@@ -1,0 +1,282 @@
+@charset "UTF-8";
+.cuerpo {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .menuLateral {
+    display: none;
+  }
+  .paginaCatalogo {
+    flex: 1;
+    width: 100%;
+  }
+  .formulario {
+    flex: 1;
+    width: 100%;
+  }
+}
+.cabecera {
+  background: linear-gradient(to top, grey 0%, white 70%, white 70%);
+  display: flex;
+  flex-wrap: wrap;
+}
+.cabecera .menus {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cabecera .menus .cabeceraBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 50px;
+  width: 200px;
+  border-bottom: 1px solid black;
+  color: #333;
+  transition: transform 0.2s;
+}
+.cabecera .menus .cabeceraBox:hover {
+  border-bottom: 3px solid #ffc7de;
+}
+.cabecera .logobox {
+  margin-left: 75px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.cabecera .logobox img {
+  width: 150px;
+  height: 150px;
+}
+
+.pieDePagina {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to top, grey 0%, white 70%, white 70%);
+  color: black;
+  padding: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 2px solid grey;
+}
+.pieDePagina .enlacesInteres {
+  flex: 1;
+  padding: 10px;
+  margin-left: 5px;
+}
+.pieDePagina .enlacesInteres ul {
+  list-style: none;
+  padding: 0;
+}
+.pieDePagina .enlacesInteres li {
+  margin-bottom: 5px;
+}
+.pieDePagina .enlacesInteres a {
+  text-decoration: none;
+  color: black;
+}
+.pieDePagina .enlacesInteres h2 {
+  font-size: 18px;
+}
+.pieDePagina .informacionTienda {
+  margin-right: 5px;
+  flex: 1;
+  padding: 10px;
+}
+.pieDePagina .informacionTienda p {
+  margin: 5px 0;
+}
+
+.menuLateral {
+  border-right: 2px solid grey;
+  max-width: 20%;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  background-color: #ffc7de;
+}
+.menuLateral .filtro {
+  width: 70%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(to top, grey 0%, white 70%, white 70%);
+  border: 2px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+.menuLateral .filtro .filtro p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.menuLateral .filtro label {
+  display: block;
+  margin-bottom: 5px;
+}
+.menuLateral .filtro input[type=range],
+.menuLateral .filtro input[type=checkbox],
+.menuLateral .filtro input[type=radio] {
+  margin-bottom: 10px;
+}
+.menuLateral .filtro input[type=range] {
+  width: 100%;
+}
+.menuLateral .filtro input[type=checkbox],
+.menuLateral .filtro input[type=radio] {
+  margin-right: 5px;
+}
+.menuLateral .columna {
+  list-style: none;
+  padding: 0;
+}
+.menuLateral .fila {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  transition: transform 0.5s;
+}
+.menuLateral .fila:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid black;
+}
+.menuLateral a {
+  text-decoration: none;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.botonCard {
+  background-color: darkgray;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.botonCard:hover {
+  background-color: grey;
+  color: white;
+}
+
+.card {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 18vw;
+  text-align: center;
+  margin: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.card img {
+  width: 18vw;
+  height: 18vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.card .precio::before {
+  content: "22.45";
+}
+.card .precio::after {
+  content: "$";
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 150px;
+  }
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .card {
+    width: 25vw;
+  }
+  .card img {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+.paginaCatalogo {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.paginaCatalogo h2 {
+  padding: 20px;
+  width: 90%;
+  border-bottom: 2px solid grey;
+}
+
+.formulario {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.formulario form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 4%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulario form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.formulario form input[type=text],
+.formulario form input[type=email],
+.formulario form input[type=password],
+.formulario form input[type=tel],
+.formulario form input[type=date],
+.formulario form input[type=url] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.formulario form input[type=submit] {
+  background: darkgray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.formulario form input[type=submit]:hover {
+  color: white;
+  background-color: grey;
+}
+.formulario form input:valid:focus {
+  box-shadow: 0 0 7px green;
+}
+.formulario form input:invalid {
+  box-shadow: 0 0 7px red;
+}
+.formulario form label[for=campoObligatorio]::after {
+  content: " *";
+  /* Agrega el asterisco (*) después del texto del label */
+  color: red;
+}/*# sourceMappingURL=main.css.map */

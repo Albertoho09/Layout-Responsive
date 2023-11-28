@@ -1,0 +1,69 @@
+@import "../base/variables";
+
+.formulario {
+    width: $anchoContenido;
+    display: flex; //flexbox
+    flex-wrap: wrap;
+    justify-content: center; //alineado al centro
+
+    form {
+        margin: auto;
+        display: flex; //convertimos a el formulario en un flexbox de una sola columna
+        flex-direction: column;
+        background-color: #fff;
+        margin: 4%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        label {
+            display: block; //para que ocupe el ancho total del formulario y obligue al siguiente elemento a estar debajo de el
+            margin-bottom: 10px;
+        }
+
+        // le damos unos valores esteticos a los inputs del formulario
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="url"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        // le damos unos valores esteticos a el submit del formulario
+        input[type="submit"] {
+            background: darkgray;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+
+        input[type="submit"]:hover {
+            //hover para el boton submit
+            color: white;
+            background-color: grey;
+        }
+
+        input:valid:focus {
+            //en caso de que la validacion se cumpla
+            box-shadow: 0 0 7px green;
+        }
+
+        input:invalid {
+            //en caso de que no
+            box-shadow: 0 0 7px red;
+        }
+
+        label[for="campoObligatorio"]::after {
+            content: ' *';
+            /* Agrega el asterisco (*) después del texto del label */
+            color: red;
+        }
+    }
+}

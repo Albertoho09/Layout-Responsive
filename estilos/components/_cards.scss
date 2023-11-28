@@ -1,0 +1,48 @@
+@import "../base/variables";
+
+.card {
+    height: fit-content; // con fit-content ajustamos la altura segun el contenido
+    width: $tamVariableCard; // ancho
+    text-align: center; // centramos el contenido
+    margin: 25px;
+    font-family: $fuente;
+
+    img {
+        width: $tamVariableCard;
+        height: $tamVariableCard;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .precio::before {
+        content: $precioProducto; //agramos el valor de la variable al principio del contenido
+    }
+
+    .precio::after {
+        content: "$"; // agregamos el simbolo al final
+    }
+}
+
+@media (max-width: $minPantalla) {
+
+    //si la pantalla cumple una medida modificamos el ancho y alto de la card y de la imagen de ella
+    .card {
+        width: $tamFijoCard;
+
+        img {
+            width: $tamFijoCard;
+            height: $tamFijoCard;
+        }
+    }
+}
+
+//aqui mas de los mismo, solo que en este caso se modifica para solo muestre 2 columnas entre los 600px y 1024px de pantalla
+@media screen and (min-width: $minPantalla) and (max-width: $maxPantalla) {
+    .card {
+        width: $tamVariableCardExt;
+
+        img {
+            width: $tamVariableCardExt;
+            height: $tamVariableCardExt;
+        }
+    }
+}

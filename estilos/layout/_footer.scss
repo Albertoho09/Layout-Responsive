@@ -1,0 +1,46 @@
+@import "../base/variables";
+
+.pieDePagina {
+    display: flex; // flexbox
+    justify-content: space-between; // Justificamos de manera horizontal, distribuyéndolo alrededor del espacio disponible.
+    background: linear-gradient(to top, grey 0%, white 70%, white 70%);
+    color: black; // color de texto
+    padding: 20px;
+    font-family: $fuente;
+    border: 2px solid grey;
+
+    .enlacesInteres {
+        flex: 1; // hacemos que el elemento ocupe todo el espacio disponible horizontalmente
+        padding: 10px;
+        margin-left: 5px;
+
+        ul {
+            list-style: none; // Elimina los marcadores 
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            text-decoration: none; // Elimina la decoración de texto subrayado.
+            color: black;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+
+    .informacionTienda {
+
+        margin-right: 5px;
+        flex: 1; // hacemos que el elemento ocupe todo el espacio disponible horizontalmente
+        padding: 10px;
+
+        p {
+            margin: 5px 0; // margen arriba y debajo de los parrafos
+        }
+    }
+}

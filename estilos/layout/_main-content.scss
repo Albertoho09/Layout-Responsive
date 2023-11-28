@@ -1,0 +1,29 @@
+@import "../base/variables";
+
+.cuerpo {
+    display: flex; //declaramos todo el cuerpo de la pagina como un flexbox
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@media (max-width: $minPantalla) {
+    .menuLateral {
+        display: none; //cuando la pantalla mida 600px se ocultara el menu lateral
+    }
+
+    .paginaCatalogo {
+        flex: 1; // ocupa todo el espacio disponible cuando el munu lateral se oculte
+        width: 100%; // por si acaso le modificamos el ancho
+    }
+
+    //lo mismo para la vista del formulario
+    .formulario {
+        flex: 1;
+        width: 100%;
+    }
+}

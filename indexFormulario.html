@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/main.css">
+    <title>Layout Alberto Hidalgo</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+
+            <div class="logobox">
+                <img src="transparent.png" alt="imagen de logo">
+            </div>
+
+            <div class="menus">
+                <div class="cabeceraBox">
+                    Menu 1
+                </div>
+                <div class="cabeceraBox">
+                    Menu 2
+                </div>
+                <div class="cabeceraBox">
+                    Menu 3
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="cuerpo">
+        <div class="menuLateral">
+            <ul class="columna">
+                <li class="fila"><a href="index.html">Inicio</a></li>
+                <li class="fila"><a href="#">Acerca de</a></li>
+                <li class="fila"><a href="#">Servicios</a></li>
+                <li class="fila"><a href="#">Contacto</a></li>
+            </ul>
+            <div class="filtro">
+                <p>Filtro:</p>
+                <label for="rango">Fragancia:</label>
+                <input type="range" id="rango">
+
+                <label for="casilla">Natural:</label>
+                <input type="checkbox" id="casilla">
+
+                <label for="radio1">Artesanal:</label>
+                <input type="radio" id="radio1" name="radioGroup">
+
+                <label for="radio2">Orgánico:</label>
+                <input type="radio" id="radio2" name="radioGroup">
+            </div>
+        </div>
+        <div class="formulario">
+            <form id="registro-form" action="procesar_registro.php" method="post">
+                <label for="campoObligatorio">Nombre (máximo 20 caracteres):</label>
+                <input type="text" id="nombre" name="nombre" required maxlength="20">
+
+                <label for="campoObligatorio">Apellidos (máximo 40 caracteres):</label>
+                <input type="text" id="apellidos" name="apellidos" required maxlength="40">
+
+                <label for="campoObligatorio">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="campoObligatorio">Contraseña (mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1
+                    símbolo):</label>
+                <input type="password" id="contrasena" name="contrasena"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+
+                <label for="telefono">Número de Teléfono (+XX-XXXX-XXXXX):</label>
+                <input type="tel" id="telefono" name="telefono" pattern="^\+\d{2}-\d{4}-\d{5}$">
+
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" max="2005-01-01">
+
+                <label for="pagina-web">URL de Página Web:</label>
+                <input type="url" id="pagina-web" name="pagina-web" pattern="https://nombre-apellidos\.com">
+
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>
+    <footer class="pieDePagina">
+        <div class="informacionTienda">
+            <h2>Información de la Tienda</h2>
+            <p>Dirección: Calle Principal 5D</p>
+            <p>Teléfono: 546-456-7890</p>
+            <p>Correo: correo@gmail.com</p>
+        </div>
+
+        <div class="enlacesInteres">
+            <h2>Enlaces de Interés</h2>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
