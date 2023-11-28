@@ -6,7 +6,21 @@
     flex: 1; // ocupa todo el ancho posible pero ligado a un maximo
     flex-direction: column; // se apilan los elementos en una columna
     height: auto; // altura segun el contenido
-    background-color: $colorMalva;
+    background-color: #f0f0f0;
+
+
+    .bannerBox{
+        display: flex;
+        justify-content: center;
+        margin: {
+            top: 50px;
+            bottom: 50px;
+        }
+        .imagenBanner{
+            width: 80%;
+        }
+    }
+
 
     .filtro {
         width: 70%;
@@ -15,7 +29,7 @@
         margin: {
             left: auto;
             right: auto;
-            top: 80px;
+            top: 50px;
         }
 
         font-weight: bolder; // fuente en negrita
@@ -26,7 +40,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         text-align: left;
 
-        .filtro p {
+        p {
             font-size: 16px;
             margin-bottom: 10px;
         }
@@ -61,7 +75,7 @@
     .fila {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 30px;
+        margin-top: 30px;
         border-bottom: 1px solid grey;
         width: 80%;
         height: 50px;

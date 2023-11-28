@@ -7,11 +7,38 @@
     margin: 25px;
     font-family: $fuente;
 
-    img {
-        width: $tamVariableCard;
-        height: $tamVariableCard;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    .imagen{
+        position: relative;
+        text-align: center;
+        img{
+            width: $tamVariableCard;
+            height: $tamVariableCard;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    
+            transition: filter 0.3s ease-out; 
+        }
+        .texto-en-medio {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black; // Ajusta el color del texto según tus preferencias
+            font-family: $fuente;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-out; // Agrega una transición suave a la opacidad
+        }
+        &:hover{
+            img{
+                filter: blur($blur-effect);
+            }
+            .texto-en-medio{
+                opacity: 1;
+            }
+        }
     }
+
+
 
     .precio::before {
         content: $precioProducto; //agramos el valor de la variable al principio del contenido
