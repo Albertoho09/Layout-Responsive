@@ -24,20 +24,20 @@ body {
 .cabecera {
   background: linear-gradient(to top, grey 0%, white 70%, white 70%);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
 }
 .cabecera .menus {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 .cabecera .menus .cabeceraBox {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 50px;
   width: 200px;
@@ -48,14 +48,47 @@ body {
 .cabecera .menus .cabeceraBox:hover {
   border-bottom: 3px solid #ffc7de;
 }
+.cabecera .menus .cabeceraBox a {
+  color: black;
+  text-decoration: none;
+}
+.cabecera .menus .cabeceraBox i {
+  margin-right: 10px;
+}
 .cabecera .logobox {
-  margin-left: 75px;
   margin-top: auto;
   margin-bottom: auto;
 }
 .cabecera .logobox img {
   width: 150px;
   height: 150px;
+}
+.cabecera .iconos {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  height: 50px;
+}
+.cabecera .iconos #carrito {
+  margin-left: 15px;
+}
+.cabecera .iconos #campana {
+  margin-right: 15px;
+}
+.cabecera .iconos #campana:hover {
+  animation: vibrar 0.2s infinite;
+}
+@keyframes vibrar {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25%, 75% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
 }
 
 .pieDePagina {
@@ -319,4 +352,51 @@ body {
   content: " *";
   /* Agrega el asterisco (*) después del texto del label */
   color: red;
+}
+
+.videoJabones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.textoSuperpuesto {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  transform: translateY(100%);
+  animation-direction: normal;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: desplazarFooter;
+}
+@keyframes desplazarFooter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.textoSuperpuesto .boton {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.textoSuperpuesto .boton:hover {
+  background: #ddd;
+  color: black;
 }/*# sourceMappingURL=main.css.map */

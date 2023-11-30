@@ -3,20 +3,18 @@
 .cabecera {
     background: linear-gradient(to top, grey 0%, white 70%, white 70%);
     display: flex; // convertimos la cabecera en un flexbox
-    flex-wrap: wrap; // utilizamos wrap para que los elementos que no quepan en pantalla pasen a la siguiente linea
-
+    flex-wrap: wrap-reverse; // utilizamos wrap para que los elementos que no quepan en pantalla pasen a la siguiente linea
+    justify-content: space-around;
     .menus {
         align-items: center; // alineamos de al centro de manera vertical
         display: flex; // convertimos tambien el menu de la cabecera en un flexbox para poder alinear los elementos del interior
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-
         .cabeceraBox {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             font-family: $fuente;
             height: 50px;
             width: 200px;
@@ -28,21 +26,56 @@
             &:hover {
                 border-bottom: 3px solid $colorMalva;
             }
+
+            a{
+                color: black;
+                text-decoration: none;
+            }
+
+            i{
+                margin-right: 10px;
+            }
         }
     }
 
     .logobox {
-
         img {
             width: 150px;
             height: 150px;
         }
 
         margin: {
-            //margenes
-            left: 75px;
+            
             top: auto;
             bottom: auto;
+        }
+    }
+
+    .iconos{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        height: 50px;
+        #carrito{
+            margin-left: 15px;
+        }
+        #campana{
+            margin-right: 15px;
+            &:hover{
+                animation: vibrar 0.2s infinite;
+            }
+            @keyframes vibrar {
+                0%, 100% {
+                    transform: rotate(0deg);
+                }
+                25%, 75% {
+                    transform: rotate(-5deg);
+                }
+                50% {
+                    transform: rotate(5deg);
+                }
+            }
         }
     }
 }
